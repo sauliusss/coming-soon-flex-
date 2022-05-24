@@ -20,13 +20,14 @@
 }
 
 .coming-soon > .row-short {
+  align-items: center;
   text-align: center;
 }
 
 .coming-soon .logo {
   width: 100%;
   height: 50px;
-  margin-bottom: 45px;
+
   object-fit: contain;
   object-position: center;
 }
@@ -43,13 +44,10 @@
 }
 
 .coming-soon .clock {
-  margin-bottom: 30px;
 }
 
 .coming-soon .form {
-  margin-bottom: 15px;
   width: 90%;
-  margin: 0 5% 15%;
 }
 .coming-soon .form > .input {
   color: #fff;
@@ -60,11 +58,9 @@
 }
 
 .column > * {
-  margin-bottom: 20px;
 }
 
 .column > *:last-child {
-  margin-bottom: 0px;
 }
 
 .section-title {
@@ -91,16 +87,14 @@
 }
 
 main .form > button {
-  float: right;
+  align-self: flex-end;
 }
 
 @media (min-width: 900px) {
   main .form > input.input {
-    width: calc(50% - 10px);
   }
 
   main .form > input.input:last-of-type {
-    float: right;
   }
 }
 
@@ -110,8 +104,12 @@ footer.container {
   color: #fff8;
 }
 
-.socials {
+.container > .socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 15px 0;
+  gap: 10px;
   border-bottom: 2px solid #fff;
   position: relative;
 }
@@ -132,20 +130,25 @@ footer.container {
   color: var(--primary-color);
 }
 
-.row-short > logo {
+footer.container > .row-short {
+  gap: 0;
+}
+
+.row-short > .logo {
   text-align: center;
 }
 
 footer .logo {
   max-height: 50px;
   width: 100%;
-  margin: 50px 0;
+  margin-bottom: 40px;
   object-fit: contain;
   object-position: top;
 }
 
 footer .trio {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 footer .trio > p::before {
@@ -165,7 +168,6 @@ footer .trio > p:first-child::before {
 }
 
 footer .trio > p {
-  float: left;
   padding: 0 10px;
   position: relative;
 }
@@ -176,8 +178,8 @@ footer p a {
 }
 
 @media (max-width: 700px) {
-  footer .trio > p {
-    width: 100%;
+  footer .trio {
+    flex-direction: column;
   }
 
   footer .trio > p::before {
