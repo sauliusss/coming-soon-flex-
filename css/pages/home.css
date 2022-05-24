@@ -1,0 +1,202 @@
+@import "../base/reset.css";
+@import "../base/variables.css";
+@import "../base/layout.css";
+
+@import "../components/font-awesome.min.css";
+
+@import "../components/button.css";
+@import "../components/clock.css";
+@import "../components/form.css";
+@import "../components/mouse.css";
+@import "../components/progress-bar.css";
+
+.coming-soon {
+  min-height: 100vh;
+  padding-bottom: 30px;
+  background-image: url(../../img/banner-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.coming-soon > .row-short {
+  text-align: center;
+}
+
+.coming-soon .logo {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 45px;
+  object-fit: contain;
+  object-position: center;
+}
+.main-title {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding-bottom: 15px;
+}
+.main-description {
+  color: grey;
+  font-size: 18px;
+  padding-bottom: 45px;
+}
+
+.coming-soon .clock {
+  margin-bottom: 30px;
+}
+
+.coming-soon .form {
+  margin-bottom: 15px;
+  width: 90%;
+  margin: 0 5% 15%;
+}
+.coming-soon .form > .input {
+  color: #fff;
+  border-color: currentColor;
+}
+.coming-soon .form > .input::placeholder {
+  color: currentColor;
+}
+
+.column > * {
+  margin-bottom: 20px;
+}
+
+.column > *:last-child {
+  margin-bottom: 0px;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1em;
+  margin-bottom: 30px;
+}
+
+.content-desription {
+  font-size: 17px;
+  margin-bottom: 30px;
+  color: grey;
+}
+
+.content-desription > a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.content-desription > a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+main .form > button {
+  float: right;
+}
+
+@media (min-width: 900px) {
+  main .form > input.input {
+    width: calc(50% - 10px);
+  }
+
+  main .form > input.input:last-of-type {
+    float: right;
+  }
+}
+
+footer.container {
+  padding-top: 0;
+  text-align: center;
+  color: #fff8;
+}
+
+.socials {
+  padding: 15px 0;
+  border-bottom: 2px solid #fff;
+  position: relative;
+}
+
+.socials > .social {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+.socials > .social:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.row-short > logo {
+  text-align: center;
+}
+
+footer .logo {
+  max-height: 50px;
+  width: 100%;
+  margin: 50px 0;
+  object-fit: contain;
+  object-position: top;
+}
+
+footer .trio {
+  display: inline-block;
+}
+
+footer .trio > p::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 70%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+footer .trio > p:first-child::before {
+  display: none;
+}
+
+footer .trio > p {
+  float: left;
+  padding: 0 10px;
+  position: relative;
+}
+
+footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  footer .trio > p {
+    width: 100%;
+  }
+
+  footer .trio > p::before {
+    display: none;
+  }
+}
+
+.back-to-top {
+  /* position: fixed;
+  bottom: 40px;
+  right: 40px; */
+
+  position: absolute;
+  top: -32px;
+  right: -25px;
+}
+
+@media (max-width: 700px) {
+  .back-to-top {
+    display: none;
+  }
+}
